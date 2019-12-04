@@ -6,13 +6,13 @@ let inputValue = '';
 btn.addEventListener('click', ()=>bracketString());
 
 function bracketString() {
+    answer.innerHTML = "Всё правильно";
     try {
         inputValue = document.querySelector('#input').value;
         if (pointer >= inputValue.length) answer.innerHTML = 'Всё Правильно';
         else {
             nesting_lvl_1();
             bracketString();
-            answer.innerHTML = 'Всё Правильно';
         }
     } catch (e) {
         answer.innerHTML = e;
@@ -62,5 +62,5 @@ function nesting_lvl_2() {
             else throw Error(`Ожидался символ ] (ошибка на позиции ${pointer})`);
         }
     }
-    if (ch===undefined) throw Error (`Не хватает символа!`);
+    else if (ch === undefined) throw Error (`Не хватает символа!`);
 }
