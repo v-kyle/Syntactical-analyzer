@@ -1,0 +1,62 @@
+html,body{
+    height: 100%;
+    font-family: Roboto, Arial, sans-serif;
+}
+body{
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#root{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#root label{
+    font-weight: bold;
+    display: block;
+    margin-bottom: 15px;
+}
+#root input{
+    border: 1px solid grey;
+    font-weight: bold;
+    display: block;
+    font-size: 1.5rem;
+}
+#root button{
+    cursor: pointer;
+    outline: none;
+    font-size: 1.1rem;
+    margin-top: 15px;
+    display: block;
+    font-weight: bold;
+    background: rgba(0,0,255,0.75);
+    border: none;
+    color: white;
+    width: 125px;
+    height: 50px;
+    border-radius: 10px;
+}
+#root button:hover{
+    transform: translate(0, 2px);
+    background: rgba(0,0,255,0.85);
+}
+#root button:active{
+    transform: translate(0, 4px);
+    background: rgba(0,0,255,1);
+}
+#answer {
+    margin-top: 15px;
+    background: rgba(120,120,0,0.4);
+    border-radius: 7px;
+    text-align: center;
+    width: 200px;
+    height: 80px;
+}
+@media (max-width: 750px) {
+    body{
+        font-size: 18px;
+    }
+}
