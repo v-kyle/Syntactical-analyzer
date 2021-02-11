@@ -3,10 +3,13 @@ let pointer = 0;
 const answer = document.querySelector('#answer');
 let inputValue = '';
 
-btn.addEventListener('click', ()=>bracketString());
+btn.addEventListener('click', () => {
+  answer.classList.remove('hide');
+  bracketString();
+});
 
 function bracketString() {
-    answer.innerHTML = "Всё правильно";
+    answer.innerHTML = 'Всё правильно';
     try {
         inputValue = document.querySelector('#input').value;
         if (pointer >= inputValue.length) answer.innerHTML = 'Всё Правильно';

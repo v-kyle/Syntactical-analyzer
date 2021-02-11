@@ -5,15 +5,23 @@
     <title>Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
-    <script async defer src="scripts.js"></script>
 </head>
 <body>
 <div id="root">
+    <div class="help-icon">
+        <img src="assets/question.svg" alt="help-icon">
+        <div class="help">
+            Правильные скобочные записи, у которых максимальная вложенность скобок - два уровня
+            <br />
+            Пример: (()[]())[[]][()]()
+        </div>
+    </div>
     <label for="input">Введите скобочную запись:</label>
-    <input id="input" type="text">
+    <input id="input" type="text" maxlength="32">
     <button>Проверить</button>
-    <div id="answer">Результат:</div>
+    <div id="answer" class="hide">Результат:</div>
+    <footer><a href="https://github.com/v-kyle" target="_blank">Leonid Nikulin</a></footer>
+    <script async defer src="scripts.js"></script>
 </div>
-
 </body>
 </html>
